@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
         /**
@@ -34,5 +37,14 @@ public class App {
          * 
          */
         System.out.println("Hello, World!");
+        List<String> strs = new ArrayList<>();
+        strs.add("hello");
+        strs.add("world");
+        Solution solution = new Solution();
+        String encoded = solution.encode(strs);
+        List<String> decoded = solution.decode(encoded);
+        System.out.println("The encoded string is: " + encoded);
+        System.out.println("The decoded list of string is:");
+        decoded.stream().forEach(System.out::println);
     }
 }
